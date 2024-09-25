@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inscripción de Voluntarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Inscripción para Voluntariado en Reciclaje</h1>
+    <form action="procesar_formulario.php" method="POST" id="formVoluntariado">
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="sector">Sector de reciclaje en el que te gustaría participar:</label>
+        <select id="sector" name="sector" required>
+            <option value="" disabled selected>Selecciona un sector</option>
+            <option value="recoleccion">Recolección de Materiales Reciclables</option>
+            <option value="clasificacion">Clasificación de Residuos</option>
+            <option value="educacion">Educación y Concienciación Ambiental</option>
+            <option value="reciclaje-electronico">Reciclaje Electrónico</option>
+            <option value="procesamiento">Transformación y Procesamiento</option>
+            <option value="logistica">Logística y Transporte</option>
+            <option value="creatividad">Diseño y Creatividad con Material Reciclado</option>
+            <option value="residuos-organicos">Gestión de Residuos Orgánicos</option>
+            <option value="investigacion">Investigación y Desarrollo</option>
+            <option value="eventos">Coordinación de Eventos de Reciclaje</option>
+        </select>
+
+        <label for="disponibilidad">Disponibilidad (días y horas):</label>
+        <textarea id="disponibilidad" name="disponibilidad" rows="4" required></textarea>
+
+        <label for="experiencia">Experiencia previa en voluntariado (opcional):</label>
+        <textarea id="experiencia" name="experiencia" rows="4"></textarea>
+
+        <label for="terminos">
+            <input type="checkbox" id="terminos" name="terminos" required>
+            Acepto los términos y condiciones
+        </label>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
